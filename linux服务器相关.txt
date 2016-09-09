@@ -1,0 +1,28 @@
+getconf LONG_BIT  查看是多少位的
+
+http://www.codingyun.com/article/40.html  jdk安装
+
+ps -ef |grep tomcat    kill -9        netstat -anp|grep 8080
+
+http://blog.csdn.net/yangxy81118/article/details/39120157
+
+
+
+mysql
+# wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
+# rpm -ivh mysql-community-release-el7-5.noarch.rpm
+# yum install mysql-community-server
+
+service mysqld restart
+
+
+http://www.cnblogs.com/zhangzhu/archive/2013/08/22/3274831.html  数据库授权 远程登录
+
+
+登录修改密码 # mysql -u root mysql mysql> UPDATE user SET Password=PASSWORD('newpassword') where USER='root'; mysql> FLUSH PRIVILEGES; mysql> quit
+（4）重新启动mysql # /etc/init.d/mysql restart
+（5）以root登录 # mysql -u root -p Enter password: mysql>
+（6）OK！
+
+
+在/etc/my.cnf 中的[mysqld]后添加添加lower_case_table_names=1，重启MySQL（service mysqld restart）服务。 忽略大小写
